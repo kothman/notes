@@ -1,0 +1,12 @@
+.disabled {
+    textarea[disabled] {
+	resize: none;
+    }
+    [disabled] {
+	border: none;
+	background-color: transparent;
+	padding: 0;
+	box-shadow: none;
+	cursor: default;
+    }
+}

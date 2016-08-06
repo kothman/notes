@@ -1,0 +1,17 @@
+$font-family-sans-serif: 'Lato', sans-serif;
+
+$panel-border-radius: 0;
+
+/* Override the default styling for navbar-inverse */
+$navbar-inverse-bg: #337ab7;
+$navbar-border-radius: 0;
+$navbar-inverse-brand-color: white;
+$navbar-inverse-link-color: white;
+
+/* Import other stylesheets */
+@import "resources/assets/sass/mixins";
+@import "https://fonts.googleapis.com/css?family=Lato";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "resources/assets/sass/nav";
+@import "resources/assets/sass/disabled";
+@import "resources/assets/sass/panel";

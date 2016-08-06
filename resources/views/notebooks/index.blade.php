@@ -1,0 +1,30 @@
+@extends('layouts.app')
+
+@section('content')
+
+    <div class="container">
+	<div class="row">
+	    <div class="col-xs-12 text-right">
+		<a class="btn btn-primary" href="{{ url('/notebooks/create') }}">
+		    <i class="fa fa-plus" aria-hidden="true"></i> New Notebook
+		</a>
+	    </div>
+	</div>
+	<div class="row">
+	    @foreach ($notebooks as $n)
+		<div class="col-xs-12 col-sm-4 col-md-3">
+		    <div class="panel panel-primary">
+			<div class="panel-heading">
+			    <a href="{{ url('/notebooks/notes/' . $n->id) }}">{{ $n->title }}</a>
+			    <a href="{{ url('/notebooks/edit/' . $n->id) }}" class="pull-right"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
+			</div>
+			<div class="panel-body">
+			    <p>{{ $n->description }}</p>
+			</div>
+		    </div>
+		</div>
+	    @endforeach
+	</div>
+    </div>
+
+@endsection

@@ -1,0 +1,34 @@
+.navbar {
+    border: 0;
+    @include shadow();
+}
+
+.navbar-inverse {
+    li > a, .navbar-brand {
+    	@include transition(.5s);
+	&:hover, &:active {
+	    background-color: $navbar-inverse-link-active-bg !important;		
+	}
+    }
+}
+
+
+
+.btn {
+     @include transition(.5s);
+}
+
+.panel {
+
+    @include shadow();
+
+    .panel-title > a {
+	@include transition(.5s);
+	padding: 5px;
+	border-radius: 5px;
+	margin-top: -5px;
+	&:hover, &:active {
+	    background-color: $navbar-inverse-link-active-bg;
+	}
+    }
+}

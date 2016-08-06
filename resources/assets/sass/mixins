@@ -1,0 +1,14 @@
+@mixin transition($seconds) {
+    -o-transition:$seconds;
+    -ms-transition:$seconds;	
+    -moz-transition:$seconds;	
+    -webkit-transition:$seconds;
+    /* ...and now for the proper property */
+    transition:$seconds;
+}
+
+@mixin shadow() {
+    -moz-box-shadow: 2px 2px 10px -2px #A8A499;
+    -webkit-box-shadow: 2px 2px 10px -2px #A8A499;
+    box-shadow: 2px 2px 10px -2px #A8A499;
+}
