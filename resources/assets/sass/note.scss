@@ -1,0 +1,13 @@
+.note {
+    padding: 5px;
+    border: 1px solid black;
+    @include shadow();
+}
+
+.panel-title {
+    margin-bottom: 5px;
+}
+
+form textarea {
+    display: none;
+}

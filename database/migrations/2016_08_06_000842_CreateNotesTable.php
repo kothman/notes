@@ -18,8 +18,10 @@ class CreateNotesTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->integer('notebook_id')->unsigned();
             $table->foreign('notebook_id')->references('id')->on('notebooks');
-            $table->string('description');
-            $table->string('text');
+            $table->string('title');
+            $table->longText('text');
+            $table->softDeletes();
+            $table->timestamps();
         });
     }
 

@@ -17,7 +17,7 @@
 		    </div>
 		    <div class="panel-body">
 			@if (!empty($notebook->id) && $notebook->trashed())
-			    <h3>This record was deleted at {{ date("F j, Y, g:i a",strtotime($notebook->deleted_at)) }}</h3>
+			    <h3>This record was deleted on {{ date("F j, Y, g:i a",strtotime($notebook->deleted_at)) }}</h3>
 			@endif
 			{!! form($form) !!}
 		    </div>

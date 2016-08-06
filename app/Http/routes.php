@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\NotebookController;
+use App\Http\Controllers\NoteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,13 @@ use App\Http\Controllers\NotebookController;
 
 Route::auth();
 
-Route::get('/', function () {
-    return redirect('/home');
-});
-Route::get('/home', 'HomeController@index');
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/', function () {
+        return redirect('/home');
+    });
+    Route::get('/home', 'HomeController@index');
 
-NotebookController::routes();
+    NoteController::routes();
+    
+    NotebookController::routes();
+});

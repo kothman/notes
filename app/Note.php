@@ -9,6 +9,11 @@ class Note extends Model
 {
     use SoftDeletes;
 
+    public function notebook ()
+    {
+        return $this->belongsTo('App\Notebook');
+    }
+
     protected $dates = [
         'created_at',
         'updated_at',

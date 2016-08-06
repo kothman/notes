@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* Override the default styling for navbar-inverse */
+/* Set some variables for our own stylesheets */
 /* Import other stylesheets */
 @import "https://fonts.googleapis.com/css?family=Lato";
 /*!
@@ -5765,14 +5766,37 @@ button.close {
   box-shadow: none;
   cursor: default; }
 
-.panel-heading a {
+.panel .panel-heading a {
   transition: 0.5s;
   padding: 5px;
   margin-top: -5px;
-  border-radius: 5px;
-  color: white; }
-  .panel-heading a:hover, .panel-heading a:active {
+  border-radius: 5px; }
+  .panel .panel-heading a:hover, .panel .panel-heading a:active {
+    color: white;
     background-color: #285f8f;
     text-decoration: none; }
+
+.panel .panel-body {
+  word-break: break-word; }
+
+.panel-primary > .panel-heading a {
+  color: white; }
+
+.panel-info > .panel-heading a {
+  color: black; }
+
+.note {
+  padding: 5px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 10px -2px #A8A499; }
+
+.panel-title {
+  margin-bottom: 5px; }
+
+form textarea {
+  display: none; }
+
+.row-actions {
+  padding-bottom: 15px; }
 
 /*# sourceMappingURL=app.css.map */

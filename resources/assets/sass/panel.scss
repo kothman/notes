@@ -1,11 +1,24 @@
-.panel-heading a {
-    @include transition(.5s);
-    padding: 5px;
-    margin-top: -5px;
-    border-radius: 5px;
-    color: white;
-    &:hover, &:active {
-	background-color: $navbar-inverse-link-active-bg;
-	text-decoration: none;
+.panel {
+    .panel-heading a {
+	@include transition(.5s);
+	padding: 5px;
+	margin-top: -5px;
+	border-radius: 5px;
+	&:hover, &:active {
+    	    color: white;
+	    background-color: $navbar-inverse-link-active-bg;
+	    text-decoration: none;
+	}
     }
+    .panel-body {
+	word-break: break-word;
+    }
+}
+
+.panel-primary > .panel-heading a {
+    color: white;
+}
+
+.panel-info > .panel-heading a {
+    color: black;
 }

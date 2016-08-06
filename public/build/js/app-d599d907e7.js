@@ -17,6 +17,7 @@ function checkDisabledForm () {
 	}
 	for(var j = 0; j < textareas.length; j++) {
 	    textareas[j].setAttribute("disabled", "");
+	    convertTextareaToDiv(textareas[j]);
 	}
 	for(var j = 0; j < selects.length; j++) {
 	    selects[j].setAttribute("disabled", "");
@@ -26,6 +27,13 @@ function checkDisabledForm () {
 	}
 
     }
+}
+
+function convertTextareaToDiv(textarea) {
+    var div = document.createElement("div");
+    div.innerHTML = textarea.value;
+    textarea.parentElement.replaceChild(div, textarea);
+    return true;
 }
 
 //# sourceMappingURL=app.js.map

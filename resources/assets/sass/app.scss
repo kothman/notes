@@ -8,6 +8,9 @@ $navbar-border-radius: 0;
 $navbar-inverse-brand-color: white;
 $navbar-inverse-link-color: white;
 
+/* Set some variables for our own stylesheets */
+$default-padding: 15px;
+
 /* Import other stylesheets */
 @import "resources/assets/sass/mixins";
 @import "https://fonts.googleapis.com/css?family=Lato";
@@ -15,3 +18,8 @@ $navbar-inverse-link-color: white;
 @import "resources/assets/sass/nav";
 @import "resources/assets/sass/disabled";
 @import "resources/assets/sass/panel";
+@import "resources/assets/sass/note";
+
+.row-actions {
+    padding-bottom: $default-padding;
+}
