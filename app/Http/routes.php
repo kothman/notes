@@ -29,5 +29,8 @@ Route::group(['middleware' => ['auth']], function () {
     NotebookController::routes();
     NoteController::routes();    
     UserController::routes();
-    AdminController::routes();
+
+    Route::group(['middleware' => ['admin']], function () {
+        AdminController::routes();
+    });
 });
