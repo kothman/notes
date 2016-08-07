@@ -20,6 +20,7 @@ Anything involving emails will require you to [setup an email driver with Larave
 
 ## Contributing
 
+Take a look at the open issues to see what sort of things I need help with. If you have ideas for new features or functionality, open an issue and I'll be glad to talk about it with you.
 
 ## License
 
