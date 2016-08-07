@@ -33,10 +33,13 @@
                 @else
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            Account <span class="caret"></span>
+                            {{ Auth::user()->email }} <span class="caret"></span>
                         </a>
 			
                         <ul class="dropdown-menu" role="menu">
+			    @if (Auth::user()->admin)
+				<li><a href="{{ url('/admin/users') }}">Admin</a></li>
+			    @endif
 			    <li><a href="{{ url('/settings') }}"><i class="fa fa-cog" aria-hidden="true"></i> Settings</a></li>
                             <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i> Logout</a></li>
                         </ul>
