@@ -32,6 +32,9 @@
         ]
     },
     "scripts": {
+	"test": [
+	    "vendor/bin/phpunit"
+	],
         "post-root-package-install": [
             "php -r \"copy('.env.example', '.env');\""
         ],
