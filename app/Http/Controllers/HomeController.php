@@ -16,6 +16,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
+        parent::__construct();
     }
 
     /**
@@ -25,7 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $notebooks = Notebook::all();
+        $notebooks = Notebook::where('user_id',$this->user->id)->get();
 
         return view('home', compact('notebooks'));
     }

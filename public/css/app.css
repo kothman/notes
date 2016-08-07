@@ -5741,6 +5741,7 @@ button.close {
 .navbar-inverse li > a, .navbar-inverse .navbar-brand {
   transition: 0.5s; }
   .navbar-inverse li > a:hover, .navbar-inverse li > a:active, .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:active {
+    color: white;
     background-color: #285f8f !important; }
 
 .btn {
@@ -5754,7 +5755,14 @@ button.close {
     border-radius: 5px;
     margin-top: -5px; }
     .panel .panel-title > a:hover, .panel .panel-title > a:active {
+      color: white;
       background-color: #285f8f; }
+
+.dropdown li {
+  padding: 5px;
+  text-align: center; }
+  .dropdown li a {
+    padding: 10px; }
 
 .disabled textarea[disabled] {
   resize: none; }

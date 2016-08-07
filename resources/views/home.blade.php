@@ -4,11 +4,11 @@
 <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
-	    @if (count($notebooks))
+	    @if ($notebooks->count() > 0)
 		@foreach ($notebooks as $notebook)
 		    <div class="panel panel-primary">
 			<div class="panel-heading">
-			    <a href="{{ url('/notebooks/notes/' . $notebook->id) }}"><i class="fa fa-book" aria-hidden="true"></i> {{ $notebook->title }}</a>
+			    <a href="{{ url('/notebooks/notes/' . $notebook->id) }}"><i class="fa fa-book" aria-hidden="true"></i> {{ $notebook->title }} - <span class="badge">{{ count($notebook->notes) }}</span></a>
 			    <a href="{{ url('/notes/create/' . $notebook->id) }}" class="pull-right"><i class="fa fa-pencil" aria-hidden="true"></i> Add Note</a>
 			</div>
 			

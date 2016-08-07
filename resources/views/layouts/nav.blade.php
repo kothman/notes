@@ -21,6 +21,7 @@
 	    @if (Auth::user())
                 <ul class="nav navbar-nav">
 		    <li><a href="{{ url('/notebooks') }}">Notebooks</a></li>
+		    <li><a href="{{ url('/notebooks/create') }}">New Notebook <i class="fa fa-plus"></i></a></li>
                 </ul>
 	    @endif
 	    
@@ -38,7 +39,7 @@
 			
                         <ul class="dropdown-menu" role="menu">
 			    @if (Auth::user()->admin)
-				<li><a href="{{ url('/admin/users') }}">Admin</a></li>
+				<li><a href="{{ url('/admin/users') }}"><i class="fa fa-shield"></i> Admin</a></li>
 			    @endif
 			    <li><a href="{{ url('/settings') }}"><i class="fa fa-cog" aria-hidden="true"></i> Settings</a></li>
                             <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i> Logout</a></li>

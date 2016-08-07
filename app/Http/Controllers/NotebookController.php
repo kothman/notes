@@ -158,7 +158,6 @@ class NotebookController extends Controller
     public static function routes ()
     {
         $controller = 'NotebookController@';
-        Route::get('/notebooks', $controller . 'index');
         Route::get('/notebooks/create', $controller . 'getCreateForm');
         Route::post('/notebooks/create', $controller . 'create');
         Route::get('/notebooks/view/{id}', $controller . 'view');

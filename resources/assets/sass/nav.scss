@@ -7,6 +7,7 @@
     li > a, .navbar-brand {
     	@include transition(.5s);
 	&:hover, &:active {
+	    color: white;
 	    background-color: $navbar-inverse-link-active-bg !important;		
 	}
     }
@@ -28,7 +29,16 @@
 	border-radius: 5px;
 	margin-top: -5px;
 	&:hover, &:active {
+	    color: white;
 	    background-color: $navbar-inverse-link-active-bg;
 	}
+    }
+}
+
+.dropdown li {
+    padding: 5px;
+    text-align: center;
+    a {
+	padding: 10px;
     }
 }
