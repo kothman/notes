@@ -5796,7 +5796,28 @@ button.close {
 form textarea {
   display: none; }
 
+.note-preview {
+  max-height: 200px;
+  position: relative;
+  overflow: hidden; }
+
+.note-preview .fader {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 50px 0;
+  background-image: linear-gradient(to bottom, transparent, white); }
+
 .row-actions {
   padding-bottom: 15px; }
+
+.fa-remove {
+  color: #a94442; }
+
+.fa-check {
+  color: #3c763d; }
 
 /*# sourceMappingURL=app.css.map */

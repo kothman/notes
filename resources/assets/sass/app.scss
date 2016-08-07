@@ -23,3 +23,11 @@ $default-padding: 15px;
 .row-actions {
     padding-bottom: $default-padding;
 }
+
+.fa-remove {
+    color: $state-danger-text;
+}
+
+.fa-check {
+    color: $state-success-text;
+}

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\NotebookController;
 use App\Http\Controllers\NoteController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,12 +19,14 @@ use App\Http\Controllers\NoteController;
 Route::auth();
 
 Route::group(['middleware' => ['auth']], function () {
+    
     Route::get('/', function () {
         return redirect('/home');
     });
     Route::get('/home', 'HomeController@index');
 
-    NoteController::routes();
-    
     NotebookController::routes();
+    NoteController::routes();    
+    UserController::routes();
+
 });

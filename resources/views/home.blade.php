@@ -32,8 +32,9 @@
 						<a href="/notes/view/{{ $note->id }}">{{ $note->title }}</a>
 						<a href="/notes/edit/{{ $note->id }}" class="pull-right"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
 					    </div>
-					    <div class="panel-body">
+					    <div class="panel-body note-preview">
 						{!! $note->text !!}
+						<div class="fader"></div>
 					    </div>
 					</div>
 				    </div>
