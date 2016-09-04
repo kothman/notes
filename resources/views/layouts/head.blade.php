@@ -11,5 +11,5 @@
     <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
-    <script src="https://npmcdn.com/vue@1.0.26/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/vue@1.0.26/dist/vue.min.js"></script>
     <script src="{{ elixir('js/app.js') }}"></script>
